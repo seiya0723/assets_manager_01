@@ -1,0 +1,40 @@
+{% load humanize %}
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <td class="text-center">id</td>
+            <td class="text-center">カテゴリ</td>
+            <td class="text-center">鑑定項目</td>
+            <td class="text-center">主な用途</td>
+            <td class="text-center">収入金額</td>
+            <td class="text-center">支出金額</td>
+            <td class="text-center">残高</td>
+            <td class="text-center">登録日</td>
+            <td class="text-center">決算日</td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+    {% for balance in balances %}
+    <tr>
+        <td>{{ balance.id }}</td>
+        <td>{{ balance.category|default:"未分類" }}</td>
+        <td>{{ balance.title }}</td>
+        <td>{{ balance.comment }}</td>
+        <td>{{ balance.income|default:"0"|intcomma }}</td>
+        <td>{{ balance.spending|default:"0"|intcomma }}</td>
+        <td>{{ balance.total|default:"0"|intcomma }}</td>
+        <td>{{ balance.dt }}</td>
+        <td>{{ balance.pay_dt }}</td>
+        <td>
+           <form action="{% url 'bbs:delete' balance.id %}" method="POST">
+               {% csrf_token %}
+               <input class="btn btn-outline-dark" type="submit" value="削除">
+           </form>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
