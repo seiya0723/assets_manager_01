@@ -1,5 +1,4 @@
 {% load static %}
-{# {% load table %} #}
 
 <html xmlns="http://www.w3.org/1999/html">
 <head>
@@ -78,9 +77,43 @@
         <input id="pay_dt" type="text" name="pay_dt" readonly>
         <input class="btn btn-success" type="submit" value="投稿">
     </form>
-   {# {% generate_asset topics %} #}
 
-    {% include "asset/table.html"%}
+    <select id="" name="">
+        <option value=""></option>
+    </select>
+
+
+
+    <input id="tab_radio_0" class="tab_radio" type="radio" name="tab_system" checked><label class="tab_label" for="tab_radio_0">1年表示</label>
+    <input id="tab_radio_1" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_1">1月</label>
+    <input id="tab_radio_2" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_2">2月</label>
+    <input id="tab_radio_3" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_3">3月</label>
+    <input id="tab_radio_4" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_4">4月</label>
+    <input id="tab_radio_5" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_5">5月</label>
+    <input id="tab_radio_6" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_6">6月</label>
+    <input id="tab_radio_7" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_7">7月</label>
+    <input id="tab_radio_8" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_8">8月</label>
+    <input id="tab_radio_9" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_9">9月</label>
+    <input id="tab_radio_10" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_10">10月</label>
+    <input id="tab_radio_11" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_11">11月</label>
+    <input id="tab_radio_12" class="tab_radio" type="radio" name="tab_system"><label class="tab_label" for="tab_radio_12">12月</label>
+
+    <div id="tab_area_0" class="tab_area">1年表示</div>
+    <div id="tab_area_1" class="tab_area">1月</div>
+    <div id="tab_area_2" class="tab_area">2月</div>
+    <div id="tab_area_3" class="tab_area">3月</div>
+    <div id="tab_area_4" class="tab_area">4月</div>
+    <div id="tab_area_5" class="tab_area">5月</div>
+    <div id="tab_area_6" class="tab_area">6月</div>
+    <div id="tab_area_7" class="tab_area">7月</div>
+    <div id="tab_area_8" class="tab_area">8月</div>
+    <div id="tab_area_9" class="tab_area">9月</div>
+    <div id="tab_area_10" class="tab_area">10月</div>
+    <div id="tab_area_11" class="tab_area">11月</div>
+    <div id="tab_area_12" class="tab_area">12月</div>
+
+
+    {% include "asset/table.html" %}
     </main>
 </body>
 </html>
